@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #4daf54;
+  }
+body{
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #272d40;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+.card_heart,.card_shop{
+   
+    font: size 25px;
+    position: absolute;
+    top: 20px;
+    top: 15px;
+    cursor: pointer;
+    
+    
+}
+.card_shop{
+    left: unset;
+    right: 20px;
+}
+.card_img{
+    transition: .5s;
+}
+.card_img img{
+    width: 70%;
+    height: auto;
+    object-fit: cover; 
+    
+    
+   
+}
+.card_tittle,.card_price{
+font-size: 25px;
+font-weight: bold;
+text-align: center;
+transition: .5s;
+}
+.card_tittle{
+    color: var(--primary-color);
+}
+.card_size,.card_color{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.card_size span{
+    color: #272d40;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin: 0 2px;
+    padding: 0 2px;
+    cursor: pointer;
+}
+.card_color span{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.card_color_green{
+    background-color: green;
+}
+.card_color_red{
+    background-color: red;
+}
+.card_color_black{
+    background-color: black;
+}.card_action button{
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+.card:hover .card_img{
+    transform:translateY(-80px) rotate(20deg);
+}
+.card:hover .card_tittle,.card:hover .card_price{
+    transform:translate(-30px,-30px)
+}
+.card_size{
+    margin-top: 130px;
+}
+.card_size,.card_color,.card_action{
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.card:hover .card_size,
+.card:hover .card_color,
+.card:hover .card_action{
+    visibility: visible;
+    opacity: 100;
+    
+}
+.card:hover .card_size{
+    margin-top: -30px;
+}
+.card_action button:hover{
+    transform: scale(.9);
+}
